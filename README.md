@@ -1,5 +1,5 @@
 ---
-license: unknown
+license: cc-by-nc-4.0
 ---
 
 # SeamlessM4T v2
