@@ -20,7 +20,7 @@ The v2 version of SeamlessM4T is a multitask adaptation of our novel *UnitY2* ar
 *Unity2* with its hierarchical character-to-unit upsampling and non-autoregressive text-to-unit decoding considerably improves over SeamlessM4T v1 in quality and inference speed.
 
 
-![SeamlessM4T architectures](images/seamlessm4t_arch.svg)
+![SeamlessM4T architectures](seamlessm4t_arch.svg)
 
 ## SeamlessM4T  models
 | Model Name         | #params | checkpoint                                                                              | metrics                                                                              |
@@ -35,11 +35,11 @@ The evaluation data ids for FLEURS, CoVoST2 and CVSS-C can be found [here](https
 
 
 ## Evaluating SeamlessM4T models
-To reproduce our results or to evaluate using the same metrics over your own test sets, please check out the [Evaluation README here](../../src/seamless_communication/cli/m4t/evaluate/README.md).
+To reproduce our results or to evaluate using the same metrics over your own test sets, please check out the [Evaluation README here](https://github.com/facebookresearch/seamless_communication/src/seamless_communication/cli/m4t/evaluate/README.md).
 
 
 ## Finetuning SeamlessM4T models
-Please check out the [Finetuning README here](../../src/seamless_communication/cli/m4t/finetune/README.md).
+Please check out the [Finetuning README here](https://github.com/facebookresearch/seamless_communication/src/seamless_communication/cli/m4t/finetune/README.md).
 
 ## Supported Languages:
 
@@ -156,7 +156,7 @@ The `target` column specifies whether a language is supported as target speech (
 | zul  | Zulu                   | Latn       | Sp, Tx | Tx     |
 
 
-Note that seamlessM4T-medium supports 200 languages in the text modality, and is based on NLLB-200 (see full list in [asset card](src/seamless_communication/cards/unity_nllb-200.yaml))
+Note that seamlessM4T-medium supports 200 languages in the text modality, and is based on NLLB-200 (see full list in [asset card](https://github.com/facebookresearch/seamless_communication/src/seamless_communication/cards/unity_nllb-200.yaml))
 
 ## Citation
 For SeamlessM4T v2, please cite :
