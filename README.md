@@ -1,10 +1,5 @@
 ---
 license: cc-by-nc-4.0
-datasets:
-- google/fleurs
-- flores
-- google/cvss
-- covost2
 language:
 - af
 - am
