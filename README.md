@@ -13,7 +13,12 @@ SeamlessM4T models support the tasks of:
 - Text-to-text translation (T2TT)
 - Automatic speech recognition (ASR).
 
-:star2: We are releasing SemalessM4T v2, an updated version with our novel *UnitY2* architecture. 
+SeamlessM4T models support:
+- 🎤 101 languages for speech input.
+- 💬 96 Languages for text input/output.
+- 🔊 35 languages for speech output.
+  
+🌟 We are releasing SemalessM4T v2, an updated version with our novel *UnitY2* architecture. 
 This new model improves over SeamlessM4T v1 in quality as well as inference speed in speech generation tasks.
 
 The v2 version of SeamlessM4T is a multitask adaptation of our novel *UnitY2* architecture. 
