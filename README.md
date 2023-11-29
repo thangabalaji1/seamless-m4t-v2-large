@@ -25,7 +25,7 @@ The v2 version of SeamlessM4T is a multitask adaptation of our novel *UnitY2* ar
 ## SeamlessM4T  models
 | Model Name         | #params | checkpoint                                                                              | metrics                                                                              |
 | ------------------ | ------- | --------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------ |
-| SeamlessM4T-Large v2  | 2.3B    | [🤗 Model card](https://huggingface.co/facebook/??) - [checkpoint](?)   | [metrics](https://dl.fbaipublicfiles.com/seamless/metrics/seamlessM4T_large_v2.zip)  |
+| SeamlessM4T-Large v2  | 2.3B    | [🤗 Model card](https://huggingface.co/facebook/seamless-m4t-v2-large) - [checkpoint](?)   | [metrics](https://dl.fbaipublicfiles.com/seamless/metrics/seamlessM4T_large_v2.zip)  |
 | SeamlessM4T-Large (v1) | 2.3B    | [🤗 Model card](https://huggingface.co/facebook/seamless-m4t-large) - [checkpoint](https://huggingface.co/facebook/seamless-m4t-large/resolve/main/multitask_unity_large.pt)   | [metrics](https://dl.fbaipublicfiles.com/seamless/metrics/seamlessM4T_large.zip)  |
 | SeamlessM4T-Medium (v1) | 1.2B    | [🤗 Model card](https://huggingface.co/facebook/seamless-m4t-medium) - [checkpoint](https://huggingface.co/facebook/seamless-m4t-medium/resolve/main/multitask_unity_medium.pt) | [metrics](https://dl.fbaipublicfiles.com/seamless/metrics/seamlessM4T_medium.zip) |
 
@@ -159,17 +159,6 @@ The `target` column specifies whether a language is supported as target speech (
 Note that seamlessM4T-medium supports 200 languages in the text modality, and is based on NLLB-200 (see full list in [asset card](src/seamless_communication/cards/unity_nllb-200.yaml))
 
 ## Citation
-For *UnitY*, please cite :
-```bibtex
-@inproceedings{inaguma-etal-2023-unity,
-    title="{U}nit{Y}: Two-pass Direct Speech-to-speech Translation with Discrete Units",
-    author="Inaguma, Hirofumi  and Popuri, Sravya  and Kulikov, Ilia  and Chen, Peng-Jen  and Wang, Changhan  and Chung, Yu-An  and Tang, Yun  and Lee, Ann  and Watanabe, Shinji  and Pino, Juan",
-    booktitle="Proceedings of the 61st Annual Meeting of the Association for Computational Linguistics (Volume 1: Long Papers)",
-    year="2023",
-    url="https://aclanthology.org/2023.acl-long.872",
-}
-```
-
 For SeamlessM4T v2, please cite :
 ```bibtex
 @inproceedings{seamless2023,
