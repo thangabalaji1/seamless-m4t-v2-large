@@ -141,11 +141,11 @@ The evaluation data ids for FLEURS, CoVoST2 and CVSS-C can be found [here](https
 
 
 ## Evaluating SeamlessM4T models
-To reproduce our results or to evaluate using the same metrics over your own test sets, please check out the [Evaluation README here](https://github.com/facebookresearch/seamless_communication/src/seamless_communication/cli/m4t/evaluate/README.md).
+To reproduce our results or to evaluate using the same metrics over your own test sets, please check out the [Evaluation README here](https://github.com/facebookresearch/seamless_communication/tree/main/src/seamless_communication/cli/m4t/evaluate).
 
 
 ## Finetuning SeamlessM4T models
-Please check out the [Finetuning README here](https://github.com/facebookresearch/seamless_communication/src/seamless_communication/cli/m4t/finetune/README.md).
+Please check out the [Finetuning README here](https://github.com/facebookresearch/seamless_communication/tree/main/src/seamless_communication/cli/m4t/finetune).
 
 ## Supported Languages:
 
@@ -262,7 +262,7 @@ The `target` column specifies whether a language is supported as target speech (
 | zul  | Zulu                   | Latn       | Sp, Tx | Tx     |
 
 
-Note that seamlessM4T-medium supports 200 languages in the text modality, and is based on NLLB-200 (see full list in [asset card](https://github.com/facebookresearch/seamless_communication/src/seamless_communication/cards/unity_nllb-200.yaml))
+Note that seamlessM4T-medium supports 200 languages in the text modality, and is based on NLLB-200 (see full list in [asset card](https://github.com/facebookresearch/seamless_communication/blob/main/src/seamless_communication/cards/unity_nllb-200.yaml))
 
 ## Citation
 For SeamlessM4T v2, please cite :
