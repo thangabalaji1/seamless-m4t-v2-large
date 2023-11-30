@@ -93,6 +93,10 @@ language:
 - yo
 - ms
 - zu
+- ary
+- arz
+- yue
+- kea
 metrics:
 - bleu
 - wer
