@@ -111,7 +111,7 @@ library_name: seamless_communication
 
 # SeamlessM4T v2
 
-SeamlessM4T is our foundational all-in-one **M**assively **M**ultilingual and **M**ultimodal **M**achine **T**ranslation model delivering high-quality translation for speech and text in nearly 100 languages.
+**SeamlessM4T** is our foundational all-in-one **M**assively **M**ultilingual and **M**ultimodal **M**achine **T**ranslation model delivering high-quality translation for speech and text in nearly 100 languages.
 
 SeamlessM4T models support the tasks of:
 - Speech-to-speech translation (S2ST)
@@ -125,12 +125,13 @@ SeamlessM4T models support:
 - 💬 96 Languages for text input/output.
 - 🔊 35 languages for speech output.
   
-🌟 We are releasing SemalessM4T v2, an updated version with our novel *UnitY2* architecture. 
+🌟 We are releasing SeamlessM4T v2, an updated version with our novel *UnitY2* architecture. 
 This new model improves over SeamlessM4T v1 in quality as well as inference speed in speech generation tasks.
 
 The v2 version of SeamlessM4T is a multitask adaptation of our novel *UnitY2* architecture. 
 *Unity2* with its hierarchical character-to-unit upsampling and non-autoregressive text-to-unit decoding considerably improves over SeamlessM4T v1 in quality and inference speed.
 
+**SeamlessM4T v2 is also supported by 🤗 Transformers, more on it [in the dedicated section below](#transformers-usage).**
 
 ![SeamlessM4T architectures](seamlessm4t_arch.svg)
 
@@ -152,6 +153,58 @@ To reproduce our results or to evaluate using the same metrics over your own tes
 
 ## Finetuning SeamlessM4T models
 Please check out the [Finetuning README here](https://github.com/facebookresearch/seamless_communication/tree/main/src/seamless_communication/cli/m4t/finetune).
+
+## Transformers usage
+
+SeamlessM4T is available in the 🤗 Transformers library, requiring minimal dependencies. Steps to get started:
+
+1. First install the 🤗 [Transformers library](https://github.com/huggingface/transformers) from main and [sentencepiece](https://github.com/google/sentencepiece):
+
+```
+pip install git+https://github.com/huggingface/transformers.git sentencepiece
+```
+
+2. Run the following Python code to generate speech samples. Here the target language is Russian:
+
+```py
+from transformers import AutoProcessor, SeamlessM4Tv2Model
+
+processor = AutoProcessor.from_pretrained("facebook/seamless-m4t-v2-large")
+model = SeamlessM4Tv2Model.from_pretrained("facebook/seamless-m4t-v2-large")
+
+# from text
+text_inputs = processor(text = "Hello, my dog is cute", src_lang="eng", return_tensors="pt")
+audio_array_from_text = model.generate(**text_inputs, tgt_lang="rus")[0].cpu().numpy().squeeze()
+
+# from audio
+audio, orig_freq =  torchaudio.load("https://www2.cs.uic.edu/~i101/SoundFiles/preamble10.wav")
+audio =  torchaudio.functional.resample(audio, orig_freq=orig_freq, new_freq=16_000) # must be a 16 kHz waveform array
+audio_inputs = processor(audios=audio, return_tensors="pt")
+audio_array_from_audio = model.generate(**audio_inputs, tgt_lang="rus")[0].cpu().numpy().squeeze()
+```
+
+3. Listen to the audio samples either in an ipynb notebook:
+
+```py
+from IPython.display import Audio
+
+sample_rate = model.sampling_rate
+Audio(audio_array_from_text, rate=sample_rate)
+# Audio(audio_array_from_audio, rate=sample_rate)
+```
+
+Or save them as a `.wav` file using a third-party library, e.g. `scipy`:
+
+```py
+import scipy
+
+sample_rate = model.sampling_rate
+scipy.io.wavfile.write("out_from_text.wav", rate=sample_rate, data=audio_array_from_text)
+# scipy.io.wavfile.write("out_from_audio.wav", rate=sample_rate, data=audio_array_from_audio)
+```
+For more details on using the SeamlessM4T model for inference using the 🤗 Transformers library, refer to the 
+**[SeamlessM4T v2 docs](https://huggingface.co/docs/transformers/main/en/model_doc/seamless_m4t_v2)** or to this **hands-on [Google Colab](https://colab.research.google.com/github/ylacombe/scripts_and_notebooks/blob/main/v2_seamless_m4t_hugging_face.ipynb).**
+
 
 ## Supported Languages:
 
