@@ -168,6 +168,7 @@ pip install git+https://github.com/huggingface/transformers.git sentencepiece
 
 ```py
 from transformers import AutoProcessor, SeamlessM4Tv2Model
+import torchaudio
 
 processor = AutoProcessor.from_pretrained("facebook/seamless-m4t-v2-large")
 model = SeamlessM4Tv2Model.from_pretrained("facebook/seamless-m4t-v2-large")
