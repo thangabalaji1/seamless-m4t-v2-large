@@ -101,6 +101,12 @@ metrics:
 - bleu
 - wer
 - chrf
+inference: False
+tags:
+  - automatic-speech-recognition
+  - audio-to-audio
+  - text-to-speech
+library_name: seamless_communication
 ---
 
 # SeamlessM4T v2
