@@ -102,8 +102,8 @@ metrics:
 - wer
 - chrf
 inference: False
+pipeline_tag: automatic-speech-recognition
 tags:
-  - automatic-speech-recognition
   - audio-to-audio
   - text-to-speech
   - seamless_communication  
