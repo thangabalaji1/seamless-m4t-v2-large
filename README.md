@@ -106,7 +106,8 @@ tags:
   - automatic-speech-recognition
   - audio-to-audio
   - text-to-speech
-library_name: seamless_communication
+  - seamless_communication  
+library_name: transformers
 ---
 
 # SeamlessM4T v2
