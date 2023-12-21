@@ -199,7 +199,7 @@ audio_array_from_audio = model.generate(**audio_inputs, tgt_lang="rus")[0].cpu()
 ```py
 from IPython.display import Audio
 
-sample_rate = model.sampling_rate
+sample_rate = model.config.sampling_rate
 Audio(audio_array_from_text, rate=sample_rate)
 # Audio(audio_array_from_audio, rate=sample_rate)
 ```
@@ -209,7 +209,7 @@ Or save them as a `.wav` file using a third-party library, e.g. `scipy`:
 ```py
 import scipy
 
-sample_rate = model.sampling_rate
+sample_rate = model.config.sampling_rate
 scipy.io.wavfile.write("out_from_text.wav", rate=sample_rate, data=audio_array_from_text)
 # scipy.io.wavfile.write("out_from_audio.wav", rate=sample_rate, data=audio_array_from_audio)
 ```
