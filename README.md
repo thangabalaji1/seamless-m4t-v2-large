@@ -97,26 +97,35 @@ language:
 - arz
 - yue
 - kea
+- ckb
+- ku
 metrics:
 - bleu
 - wer
 - chrf
-inference: False
+inference: false
 pipeline_tag: automatic-speech-recognition
 tags:
-  - audio-to-audio
-  - text-to-speech
-  - seamless_communication  
+- audio-to-audio
+- text-to-speech
+- seamless_communication
 library_name: transformers
 widget:
-  - src: https://cdn-media.huggingface.co/speech_samples/sample1.flac
-    example_title: Librispeech sample 1
-    output:
-      text: going along slushy country roads and speaking to damp audiences in draughty schoolrooms day after day for a fortnight he'll have to put in an appearance at some place of worship on sunday morning and he can come to us immediately afterwards
-  - src: https://cdn-media.huggingface.co/speech_samples/sample2.flac
-    example_title: Librispeech sample 2
-    output:
-      text: before he had time to answer a much-encumbered vera burst into the room with the question i say can i leave these here these were a small black pig and a lusty specimen of black-red game-cock
+- src: https://cdn-media.huggingface.co/speech_samples/sample1.flac
+  example_title: Librispeech sample 1
+  output:
+    text: >-
+      going along slushy country roads and speaking to damp audiences in
+      draughty schoolrooms day after day for a fortnight he'll have to put in an
+      appearance at some place of worship on sunday morning and he can come to
+      us immediately afterwards
+- src: https://cdn-media.huggingface.co/speech_samples/sample2.flac
+  example_title: Librispeech sample 2
+  output:
+    text: >-
+      before he had time to answer a much-encumbered vera burst into the room
+      with the question i say can i leave these here these were a small black
+      pig and a lusty specimen of black-red game-cock
 ---
 
 # SeamlessM4T v2
